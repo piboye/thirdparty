@@ -5,9 +5,6 @@
 #ifndef GPERFTOOLS_CONFIG_H_
 #define GPERFTOOLS_CONFIG_H_
 
-#ifdef __unix__
-#include <features.h> // For __GLIBC_PREREQ
-#endif
 
 /* Define to 1 if compiler supports __builtin_stack_pointer */
 /* #undef HAVE_BUILTIN_STACK_POINTER */
@@ -73,7 +70,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the <libunwind.h> header file. */
-/* #undef HAVE_LIBUNWIND_H */
+#define HAVE_LIBUNWIND_H 1
 
 /* Define to 1 if you have the <linux/ptrace.h> header file. */
 #define HAVE_LINUX_PTRACE_H 1
@@ -194,12 +191,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to 'volatile' if __malloc_hook is declared volatile */
-// glibc's __malloc_hook/etc were declared volatile starting in glibc 2.14
-#if defined(__GLIBC_PREREQ) && __GLIBC_PREREQ(2, 14)
-#define MALLOC_HOOK_MAYBE_VOLATILE volatile
-#else
-#define MALLOC_HOOK_MAYBE_VOLATILE
-#endif
+#define MALLOC_HOOK_MAYBE_VOLATILE /**/
 
 /* Define to 1 if your C compiler doesn't accept -c and -o together. */
 /* #undef NO_MINUS_C_MINUS_O */
