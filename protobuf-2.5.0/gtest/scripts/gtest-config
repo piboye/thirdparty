@@ -193,10 +193,10 @@ done
 
 # These have defaults filled in by the configure script but can also be
 # overridden by environment variables or command line parameters.
-prefix="${GTEST_PREFIX:-/data/home/piboyeliu/code/conet/thirdparty/protobuf-2.5.0/build}"
+prefix="${GTEST_PREFIX:-/usr/local}"
 exec_prefix="${GTEST_EXEC_PREFIX:-${prefix}}"
 libdir="${GTEST_LIBDIR:-${exec_prefix}/lib}"
-includedir="${GTEST_INCLUDEDIR:-/data/home/piboyeliu/code/conet/thirdparty/protobuf}"
+includedir="${GTEST_INCLUDEDIR:-${prefix}/include}"
 
 # We try and detect if our binary is not located at its installed location. If
 # it's not, we provide variables pointing to the source and build tree rather
