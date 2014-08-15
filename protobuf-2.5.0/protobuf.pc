@@ -1,7 +1,7 @@
-prefix=/data/home/piboyeliu/code/conet/thirdparty/protobuf-2.5.0/build
+prefix=/usr/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
-includedir=/data/home/piboyeliu/code/conet/thirdparty/protobuf
+includedir=${prefix}/include
 
 Name: Protocol Buffers
 Description: Google's Data Interchange Format
