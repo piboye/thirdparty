@@ -18,3 +18,7 @@ cc_library(
     prebuilt=True,
 )
 
+cc_library(
+    name = 'unwind-setjmp',
+    prebuilt=True,
+)
