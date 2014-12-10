@@ -70,7 +70,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the <libunwind.h> header file. */
-/* #undef HAVE_LIBUNWIND_H */
+#define HAVE_LIBUNWIND_H 1
 
 /* Define to 1 if you have the <linux/ptrace.h> header file. */
 #define HAVE_LINUX_PTRACE_H 1
@@ -191,7 +191,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to 'volatile' if __malloc_hook is declared volatile */
-#define MALLOC_HOOK_MAYBE_VOLATILE volatile
+#define MALLOC_HOOK_MAYBE_VOLATILE /**/
 
 /* Define to 1 if your C compiler doesn't accept -c and -o together. */
 /* #undef NO_MINUS_C_MINUS_O */
