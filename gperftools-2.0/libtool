@@ -2,7 +2,7 @@
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status (gperftools) 2.0
-# Libtool was configured on host localhost.localdomain:
+# Libtool was configured on host timidev:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 #
 #   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004, 2005,
@@ -234,10 +234,24 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
+<<<<<<< HEAD
 sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib64 /lib64"
 
 # Run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /usr/lib64/mysql /usr/lib64/qt-3.3/lib /usr/lib64/xulrunner /lib64/ /usr/local/lib/ "
+=======
+<<<<<<< HEAD
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.4.6 /usr/lib64 /lib64"
+
+# Run-time system search path for libraries.
+sys_lib_dlsearch_path_spec="/lib /usr/lib /lib64 /lib /usr/lib64 /usr/lib /usr/local/lib64 /usr/local/lib /usr/lib64/atlas /usr/lib/ctapi /usr/lib64/ctapi /usr/lib64/mysql "
+=======
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.8.2 /usr/lib64 /lib64"
+
+# Run-time system search path for libraries.
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /usr/lib64/dyninst /usr/lib64/iscsi /usr/lib64/mysql /usr/lib64/qt-3.3/lib /usr/lib64/tracker-0.16 "
+>>>>>>> c6b12cbcd93b95c6de280ba4855d04660d763e1e
+>>>>>>> cab3a03eb4af1c3e155cb23a96e0644feafd4ff6
 
 # Whether dlopen is supported.
 dlopen_support=unknown
@@ -275,7 +289,7 @@ wl="-Wl,"
 pic_flag=" -fPIC -DPIC"
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Does compiler simultaneously support -c and -o options?
 compiler_c_o="yes"
@@ -8937,7 +8951,7 @@ wl="-Wl,"
 pic_flag=" -fPIC -DPIC"
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Does compiler simultaneously support -c and -o options?
 compiler_c_o="yes"
@@ -9047,17 +9061,43 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
+<<<<<<< HEAD
 compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../.."
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
 predep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbeginS.o"
 postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o"
+=======
+<<<<<<< HEAD
+compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/4.4.6 /usr/lib/gcc/x86_64-redhat-linux/4.4.6 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.."
+
+# Dependencies to place before and after the objects being linked to
+# create a shared library.
+predep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o"
+postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o"
+=======
+compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/4.8.2 /usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../.."
+
+# Dependencies to place before and after the objects being linked to
+# create a shared library.
+predep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbeginS.o"
+postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/crtn.o"
+>>>>>>> c6b12cbcd93b95c6de280ba4855d04660d763e1e
+>>>>>>> cab3a03eb4af1c3e155cb23a96e0644feafd4ff6
 predeps=""
 postdeps="-lstdc++ -lm -lgcc_s -lc -lgcc_s"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
+<<<<<<< HEAD
 compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../.."
+=======
+<<<<<<< HEAD
+compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.."
+=======
+compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../.."
+>>>>>>> c6b12cbcd93b95c6de280ba4855d04660d763e1e
+>>>>>>> cab3a03eb4af1c3e155cb23a96e0644feafd4ff6
 
 # ### END LIBTOOL TAG CONFIG: CXX

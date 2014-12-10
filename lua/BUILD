@@ -1,4 +1,4 @@
 cc_library(
     name = 'lua',
-    deps = ['//thirdparty/luajit-2.0/src:luajit']
+    deps = ['//thirdparty/lua-5.2.3/src:lua'],
 )

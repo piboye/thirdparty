@@ -1729,12 +1729,12 @@ DIST_ARCHIVES = $(distdir).tar.gz $(distdir).zip
 GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run aclocal-1.10
-AMTAR = ${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run tar
+ACLOCAL = ${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run aclocal-1.10
+AMTAR = ${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run tar
 AR = ar
-AUTOCONF = ${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run autoconf
-AUTOHEADER = ${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run autoheader
-AUTOMAKE = ${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run automake-1.10
+AUTOCONF = ${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run autoconf
+AUTOHEADER = ${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run autoheader
+AUTOMAKE = ${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run automake-1.10
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -1772,8 +1772,17 @@ LIBTOOL_DEPS = ./ltmain.sh
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run makeinfo
+<<<<<<< HEAD
+MAKEINFO = ${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
+=======
+MAKEINFO = ${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run makeinfo
+<<<<<<< HEAD
+MKDIR_P = /bin/mkdir -p
+=======
+MKDIR_P = /usr/bin/mkdir -p
+>>>>>>> c6b12cbcd93b95c6de280ba4855d04660d763e1e
+>>>>>>> cab3a03eb4af1c3e155cb23a96e0644feafd4ff6
 NANOSLEEP_LIBS = 
 NM = /usr/bin/nm -B
 NMEDIT = 
@@ -1805,10 +1814,10 @@ TC_VERSION_MINOR = 0
 TC_VERSION_PATCH = 
 UNWIND_LIBS = -lunwind
 VERSION = 2.0
-abs_builddir = /data/code/conet/thirdparty/gperftools-2.0
-abs_srcdir = /data/code/conet/thirdparty/gperftools-2.0
-abs_top_builddir = /data/code/conet/thirdparty/gperftools-2.0
-abs_top_srcdir = /data/code/conet/thirdparty/gperftools-2.0
+abs_builddir = /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0
+abs_srcdir = /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0
+abs_top_builddir = /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0
+abs_top_srcdir = /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
@@ -1839,7 +1848,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = $(SHELL) /data/code/conet/thirdparty/gperftools-2.0/install-sh
+install_sh = $(SHELL) /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
