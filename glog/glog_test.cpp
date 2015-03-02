@@ -2,6 +2,7 @@
 #include "thirdparty/glog/raw_logging.h"
 
 #include "thirdparty/gtest/gtest.h"
+#include "thirdparty/gflags/gflags.h"
 
 TEST(GLog, Test)
 {
