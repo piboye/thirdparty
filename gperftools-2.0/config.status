@@ -437,10 +437,10 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0'
+ac_pwd='/data/code/conet/thirdparty/gperftools-2.0'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
-MKDIR_P='/bin/mkdir -p'
+MKDIR_P='/usr/bin/mkdir -p'
 AWK='gawk'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
@@ -561,15 +561,15 @@ host_os='linux-gnu'
 build_alias=''
 build='x86_64-unknown-linux-gnu'
 build_os='linux-gnu'
-SED='/bin/sed'
-Xsed='/bin/sed -e 1s/^X//'
-GREP='/bin/grep'
-EGREP='/bin/grep -E'
-FGREP='/bin/grep -F'
+SED='/usr/bin/sed'
+Xsed='/usr/bin/sed -e 1s/^X//'
+GREP='/usr/bin/grep'
+EGREP='/usr/bin/grep -E'
+FGREP='/usr/bin/grep -F'
 LD='/usr/bin/ld -m elf_x86_64'
 NM='/usr/bin/nm -B'
 LN_S='ln -s'
-max_cmd_len='1966080'
+max_cmd_len='1572864'
 ac_objext='o'
 exeext=''
 lt_unset='unset'
@@ -602,7 +602,7 @@ MAGIC_CMD='file'
 lt_prog_compiler_no_builtin_flag=' -fno-builtin'
 lt_prog_compiler_wl='-Wl,'
 lt_prog_compiler_pic=' -fPIC -DPIC'
-lt_prog_compiler_static='-static'
+lt_prog_compiler_static=''
 lt_cv_prog_compiler_c_o='yes'
 need_locks='no'
 DSYMUTIL=''
@@ -662,18 +662,8 @@ postuninstall_cmds=''
 finish_cmds='PATH="\$PATH:/sbin" ldconfig -n $libdir'
 finish_eval=''
 hardcode_into_libs='yes'
-<<<<<<< HEAD
-sys_lib_search_path_spec='/usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib64 /lib64'
-sys_lib_dlsearch_path_spec='/lib /usr/lib /usr/lib64/atlas /usr/lib64/mysql /usr/lib64/qt-3.3/lib /usr/lib64/xulrunner /lib64/ /usr/local/lib/ '
-=======
-<<<<<<< HEAD
-sys_lib_search_path_spec='/usr/lib/gcc/x86_64-redhat-linux/4.4.6 /usr/lib64 /lib64'
-sys_lib_dlsearch_path_spec='/lib /usr/lib /lib64 /lib /usr/lib64 /usr/lib /usr/local/lib64 /usr/local/lib /usr/lib64/atlas /usr/lib/ctapi /usr/lib64/ctapi /usr/lib64/mysql '
-=======
 sys_lib_search_path_spec='/usr/lib/gcc/x86_64-redhat-linux/4.8.2 /usr/lib64 /lib64'
 sys_lib_dlsearch_path_spec='/lib /usr/lib /usr/lib64/atlas /usr/lib64/dyninst /usr/lib64/iscsi /usr/lib64/mysql /usr/lib64/qt-3.3/lib /usr/lib64/tracker-0.16 '
->>>>>>> c6b12cbcd93b95c6de280ba4855d04660d763e1e
->>>>>>> cab3a03eb4af1c3e155cb23a96e0644feafd4ff6
 hardcode_action='immediate'
 enable_dlopen='unknown'
 enable_dlopen_self='unknown'
@@ -693,7 +683,7 @@ GCC_CXX='yes'
 lt_prog_compiler_no_builtin_flag_CXX=' -fno-builtin'
 lt_prog_compiler_wl_CXX='-Wl,'
 lt_prog_compiler_pic_CXX=' -fPIC -DPIC'
-lt_prog_compiler_static_CXX='-static'
+lt_prog_compiler_static_CXX=''
 lt_cv_prog_compiler_c_o_CXX='yes'
 archive_cmds_need_lc_CXX='no'
 enable_shared_with_static_runtimes_CXX='no'
@@ -727,30 +717,12 @@ include_expsyms_CXX=''
 prelink_cmds_CXX=''
 file_list_spec_CXX=''
 hardcode_action_CXX='immediate'
-<<<<<<< HEAD
-compiler_lib_search_dirs_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..'
-predep_objects_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbeginS.o'
-postdep_objects_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o'
-predeps_CXX=''
-postdeps_CXX='-lstdc++ -lm -lgcc_s -lc -lgcc_s'
-compiler_lib_search_path_CXX='-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..'
-=======
-<<<<<<< HEAD
-compiler_lib_search_dirs_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.4.6 /usr/lib/gcc/x86_64-redhat-linux/4.4.6 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../..'
-predep_objects_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o'
-postdep_objects_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o'
-predeps_CXX=''
-postdeps_CXX='-lstdc++ -lm -lgcc_s -lc -lgcc_s'
-compiler_lib_search_path_CXX='-L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../..'
-=======
 compiler_lib_search_dirs_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.8.2 /usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..'
 predep_objects_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbeginS.o'
 postdep_objects_CXX='/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/crtn.o'
 predeps_CXX=''
 postdeps_CXX='-lstdc++ -lm -lgcc_s -lc -lgcc_s'
 compiler_lib_search_path_CXX='-L/usr/lib/gcc/x86_64-redhat-linux/4.8.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..'
->>>>>>> c6b12cbcd93b95c6de280ba4855d04660d763e1e
->>>>>>> cab3a03eb4af1c3e155cb23a96e0644feafd4ff6
 
 LTCC='gcc'
 LTCFLAGS='-g -O2'
@@ -916,7 +888,7 @@ S["X86_64_AND_NO_FP_BY_DEFAULT_FALSE"]="#"
 S["X86_64_AND_NO_FP_BY_DEFAULT_TRUE"]=""
 S["ENABLE_FRAME_POINTERS_FALSE"]=""
 S["ENABLE_FRAME_POINTERS_TRUE"]="#"
-S["UNWIND_LIBS"]="-lunwind"
+S["UNWIND_LIBS"]=""
 S["ENABLE_STATIC_FALSE"]="#"
 S["ENABLE_STATIC_TRUE"]=""
 S["ac_cv_have_struct_mallinfo"]="1"
@@ -938,10 +910,10 @@ S["NM"]="/usr/bin/nm -B"
 S["ac_ct_DUMPBIN"]=""
 S["DUMPBIN"]=""
 S["LD"]="/usr/bin/ld -m elf_x86_64"
-S["FGREP"]="/bin/grep -F"
-S["EGREP"]="/bin/grep -E"
-S["GREP"]="/bin/grep"
-S["SED"]="/bin/sed"
+S["FGREP"]="/usr/bin/grep -F"
+S["EGREP"]="/usr/bin/grep -E"
+S["GREP"]="/usr/bin/grep"
+S["SED"]="/usr/bin/sed"
 S["LIBTOOL"]="$(SHELL) $(top_builddir)/libtool"
 S["HAVE_OBJCOPY_WEAKEN_FALSE"]="#"
 S["HAVE_OBJCOPY_WEAKEN_TRUE"]=""
@@ -976,20 +948,20 @@ S["TC_VERSION_MINOR"]="0"
 S["TC_VERSION_MAJOR"]="2"
 S["am__untar"]="${AMTAR} xf -"
 S["am__tar"]="${AMTAR} chof - \"$$tardir\""
-S["AMTAR"]="${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run tar"
+S["AMTAR"]="${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run tar"
 S["am__leading_dot"]="."
 S["SET_MAKE"]=""
 S["AWK"]="gawk"
-S["mkdir_p"]="/bin/mkdir -p"
-S["MKDIR_P"]="/bin/mkdir -p"
+S["mkdir_p"]="/usr/bin/mkdir -p"
+S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="strip"
-S["install_sh"]="$(SHELL) /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/install-sh"
-S["MAKEINFO"]="${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run automake-1.10"
-S["AUTOCONF"]="${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /data/home/piboyeliu/code/conet/thirdparty/gperftools-2.0/missing --run aclocal-1.10"
+S["install_sh"]="$(SHELL) /data/code/conet/thirdparty/gperftools-2.0/install-sh"
+S["MAKEINFO"]="${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run automake-1.10"
+S["AUTOCONF"]="${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /data/code/conet/thirdparty/gperftools-2.0/missing --run aclocal-1.10"
 S["VERSION"]="2.0"
 S["PACKAGE"]="gperftools"
 S["CYGPATH_W"]="echo"
@@ -1116,7 +1088,6 @@ D["HAVE_FEATURES_H"]=" 1"
 D["HAVE_MALLOC_H"]=" 1"
 D["HAVE_GLOB_H"]=" 1"
 D["HAVE_EXECINFO_H"]=" 1"
-D["HAVE_LIBUNWIND_H"]=" 1"
 D["HAVE_UNWIND_H"]=" 1"
 D["HAVE_SCHED_H"]=" 1"
 D["HAVE_SYS_PRCTL_H"]=" 1"
@@ -1149,7 +1120,7 @@ D["PRIxS"]=" \"lx\""
 D["PRIdS"]=" \"ld\""
 D["HAVE___ENVIRON"]=" 1"
 D["HAVE_TLS"]=" 1"
-D["MALLOC_HOOK_MAYBE_VOLATILE"]=" /**/"
+D["MALLOC_HOOK_MAYBE_VOLATILE"]=" volatile"
 D["HAVE_DECL_UNAME"]=" 1"
 D["HAVE_PTHREAD"]=" 1"
 D["HAVE_NAMESPACES"]=" 1"
