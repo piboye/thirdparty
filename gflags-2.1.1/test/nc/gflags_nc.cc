@@ -1,4 +1,4 @@
-// Copyright 2006, Google Inc.
+// Copyright (c) 2009, Google Inc.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -27,18 +27,47 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#include <iostream>
+// ---
+//
+// A negative comiple test for gflags.
 
-#include "thirdparty/gflags/gflags.h"
-#include "thirdparty/glog/logging.h"
-#include "thirdparty/gtest/gtest.h"
+#include <gflags/gflags.h>
 
-int main(int argc, char **argv) {
-  std::cout << "Running main() from gtest_main.cc\n";
+#if defined(TEST_SWAPPED_ARGS)
 
-  ::testing::InitGoogleTest(&argc, argv);
-  ::gflags::ParseCommandLineFlags(&argc, &argv, true);
-  ::google::InitGoogleLogging(argv[0]);
+DEFINE_bool(some_bool_flag,
+            "the default value should go here, not the description",
+            false);
 
-  return RUN_ALL_TESTS();
+
+#elif defined(TEST_INT_INSTEAD_OF_BOOL)
+
+DEFINE_bool(some_bool_flag_2,
+            0,
+            "should have been an int32 flag but mistakenly used bool instead");
+
+#elif defined(TEST_BOOL_IN_QUOTES)
+
+
+DEFINE_bool(some_bool_flag_3,
+            "false",
+            "false in in quotes, which is wrong");
+
+#elif defined(TEST_SANITY)
+
+DEFINE_bool(some_bool_flag_4,
+            true,
+            "this is the correct usage of DEFINE_bool");
+
+#elif defined(TEST_DEFINE_STRING_WITH_0)
+
+DEFINE_string(some_string_flag,
+              0,
+              "Trying to construct a string by passing 0 would cause a crash.");
+
+#endif
+
+int main(int, char **)
+{
+  return 0;
 }

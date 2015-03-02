@@ -1,4 +1,4 @@
-// Copyright 2006, Google Inc.
+// Copyright (c) 2011, Google Inc.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -26,19 +26,36 @@
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+// ---
+// Author: csilvers@google.com (Craig Silverstein)
+//
+// A simple program that uses STRIP_FLAG_HELP.  We'll have a shell
+// script that runs 'strings' over this program and makes sure
+// that the help string is not in there.
 
-#include <iostream>
+#include "config_for_unittests.h"
+#define STRIP_FLAG_HELP 1
+#include <gflags/gflags.h>
 
-#include "thirdparty/gflags/gflags.h"
-#include "thirdparty/glog/logging.h"
-#include "thirdparty/gtest/gtest.h"
+#include <stdio.h>
 
-int main(int argc, char **argv) {
-  std::cout << "Running main() from gtest_main.cc\n";
+using GFLAGS_NAMESPACE::SetUsageMessage;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 
-  ::testing::InitGoogleTest(&argc, argv);
-  ::gflags::ParseCommandLineFlags(&argc, &argv, true);
-  ::google::InitGoogleLogging(argv[0]);
 
-  return RUN_ALL_TESTS();
+DEFINE_bool(test, true, "This text should be stripped out");
+
+int main(int argc, char** argv) {
+  SetUsageMessage("Usage message");
+  ParseCommandLineFlags(&argc, &argv, false);
+
+  // Unfortunately, for us, libtool can replace executables with a shell
+  // script that does some work before calling the 'real' executable
+  // under a different name.  We need the 'real' executable name to run
+  // 'strings' on it, so we construct this binary to print the real
+  // name (argv[0]) on stdout when run.
+  puts(argv[0]);
+
+  return 0;
 }
