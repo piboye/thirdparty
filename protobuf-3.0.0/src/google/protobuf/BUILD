@@ -22,9 +22,11 @@ cc_library(
         "wire_format.cc",
         "wire_format_lite.cc",
 
+
         "io/coded_stream.cc",
         "io/gzip_stream.cc",
         "io/printer.cc",
+        "io/strtod.cc",
         "io/tokenizer.cc",
         "io/zero_copy_stream.cc",
         "io/zero_copy_stream_impl.cc",
@@ -48,7 +50,7 @@ cc_library(
     cppflags = ['-DHAVE_CONFIG_H'],
     incs = ["../../", "../../../"],
     warning = 'no'
-)
+);
 
 cc_library(
     name = 'protoc',
@@ -114,4 +116,14 @@ cc_library(
     ],
     incs = ["../../", "../../../"],
     warning = 'no'
+);
+
+cc_binary(
+    name = "protoc-bin",
+    srcs =[
+        "compiler/main.cc",
+    ],
+    deps= [ ':protoc'],
+    incs = ["../../", "../../../"],
 )
+
