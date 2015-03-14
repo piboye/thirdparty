@@ -47,7 +47,7 @@ cc_library(
         '#pthread',
         '#z'
     ],
-    cppflags = ['-DHAVE_CONFIG_H'],
+    defs = ['HAVE_CONFIG_H'],
     incs = ["../../", "../../../"],
     warning = 'no'
 );
@@ -114,6 +114,7 @@ cc_library(
         ':protobuf',
         '//thirdparty/glog:glog',
     ],
+    defs = ['HAVE_CONFIG_H'],
     incs = ["../../", "../../../"],
     warning = 'no'
 );
@@ -123,6 +124,7 @@ cc_binary(
     srcs =[
         "compiler/main.cc",
     ],
+    defs = ['HAVE_CONFIG_H'],
     deps= [ ':protoc'],
     incs = ["../../", "../../../"],
 )
