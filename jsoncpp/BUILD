@@ -2,6 +2,6 @@
 
 cc_library(
     name = 'jsoncpp',
-    deps = '//thirdparty/jsoncpp-0.6.0-dev:jsoncpp'
+    deps = '//thirdparty/jsoncpp-1.6.0:jsoncpp'
 )
 
