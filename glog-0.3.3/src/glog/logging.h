@@ -127,15 +127,13 @@ typedef unsigned __int64 uint64;
 // the absence of better information (ie. -fprofile-arcs).
 //
 #ifndef GOOGLE_PREDICT_BRANCH_NOT_TAKEN
-#if 1
 #define GOOGLE_PREDICT_BRANCH_NOT_TAKEN(x) (__builtin_expect(x, 0))
-#define GOOGLE_PREDICT_FALSE(x) (__builtin_expect(x, 0))
-#define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
-#else
-#define GOOGLE_PREDICT_BRANCH_NOT_TAKEN(x) x
-#define GOOGLE_PREDICT_FALSE(x) x
-#define GOOGLE_PREDICT_TRUE(x) x
 #endif
+#ifndef GOOGLE_PREDICT_FALSE
+#define GOOGLE_PREDICT_FALSE(x) (__builtin_expect(x, 0))
+#endif
+#ifndef GOOGLE_PREDICT_TRUE
+#define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
 #endif
 
 // Make a bunch of macros for logging.  The way to log things is to stream
