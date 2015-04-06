@@ -88,7 +88,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the <libunwind.h> header file. */
-#define HAVE_LIBUNWIND_H 1
+/* #undef HAVE_LIBUNWIND_H */
 
 /* Define to 1 if you have the <linux/ptrace.h> header file. */
 #define HAVE_LINUX_PTRACE_H 1
@@ -216,7 +216,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to 'volatile' if __malloc_hook is declared volatile */
-#define MALLOC_HOOK_MAYBE_VOLATILE /**/
+#define MALLOC_HOOK_MAYBE_VOLATILE volatile
 
 /* Name of package */
 #define PACKAGE "gperftools"
